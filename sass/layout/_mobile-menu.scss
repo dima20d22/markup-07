@@ -1,0 +1,114 @@
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  background-color: #ffff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+
+
+  &__close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    line-height: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__close-btn__icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.mobile-menu__nav,
+.mobile-menu__contacts {
+  width: fit-content;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__link {
+  @include font(50, 40px, 47px);
+  letter-spacing: 0.02em;
+  color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--bluelish);
+  }
+}
+
+.mobile-menu__contacts {
+  flex-wrap: wrap;
+  margin-top: auto;
+  // margin-top: 302px;
+}
+
+.contacts__elem-tel {
+  margin-bottom: 32px
+}
+
+.contacts__elem-email {
+  margin-bottom: 64px
+}
+
+.contacts__link-tel {
+  @include font(500, 34px, 40px);
+  letter-spacing: 0.02em;
+  color: var(--bluelish);
+
+  &:hover,
+  &:focus {
+    box-shadow: 3px 3px var(--bluelish), -1em 0 .4em var(--bluelish);
+  }
+}
+
+.contacts__link-email {
+  @include font(500, 24px, 28px);
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mobile-menu__social-media {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-media__list:not(:last-child) {
+  margin-right: 10px
+}
+
+.social-media__list:nth-child(n+2) .social-media__link::before {
+  content: "";
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  margin-right: 10px;
+}
+
+.social-media__link {
+  @include font(500, 18px, 22px);
+  letter-spacing: 0.02em;
+  color: var(--bluelish);
+  outline: none;
+  background-color: transparent;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 10px 5px 5px var(--bluelish);
+  }
+}

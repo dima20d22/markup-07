@@ -1,0 +1,38 @@
+.logo {
+    font-family: 'Raleway', sans-serif;
+    @include font(700, 24px, 28px);
+    letter-spacing: 0.03em;
+    color: var(--blacklish);
+}
+
+.logo__web {
+    @include font(700, 24px, 28px);
+    letter-spacing: 0.03em;
+    color: var(--bluelish);
+}
+
+.logo--footer {
+    color: #FFFFFF;
+}
+
+@media screen and (min-winth:1200px) {
+    .logo {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.20;
+        letter-spacing: 0.03em;
+        color: var(--blacklish);
+    }
+
+    .logo__web {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.20;
+        letter-spacing: 0.03em;
+        color: var(--bluelish);
+    }
+
+    .logo--header {
+        margin-right: 92px;
+    }
+}

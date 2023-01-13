@@ -1,0 +1,39 @@
+.btn {
+    display: flex;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: var(--bluelish);
+    border-radius: 4px;
+    border: none;
+    padding: 10px 32px;
+    margin-top: 30px;
+    margin: 0 auto;
+
+    &:hover,
+    &:focus {
+        background: var(--bluelish);
+        outline: none;
+    }
+}
+
+// 
+
+.btn--footer {
+    height: max-content;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 10px 25px;
+}
+
+// 
+
+.btn--modal-window {
+    display: block;
+    padding: 10px 55px;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
