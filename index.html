@@ -48,15 +48,15 @@
           </a>
         </li>
       </ul>
-      <button class="burger-menu">
+      <button class="burger-menu" data-menu-open>
         <svg class="burger__icon">
           <use href="./images/sprite.svg#icon-burger">
           </use>
         </svg>
       </button>
     </div>
-    <!-- <div class="mobile-menu">
-      <button type="button" class="mobile-menu__close-btn">
+    <div class="mobile-menu is-open is-hidden" data-menu>
+      <button type="button" class="mobile-menu__close-btn" data-menu-close>
         <svg class="mobile-menu__close-btn__icon">
           <use href="./images/sprite.svg#icon-close"></use>
         </svg>
@@ -103,16 +103,16 @@
           </ul>
         </li>
       </ul>
-    </div> -->
+    </div>
   </header>
   <main>
-    <!-- <section class="hero">
-   <div class="container--hero">
-    <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-    <button class="btn" type="button" data-modal-open>Заказать услугу</button>
-   </div>
-  </section>
-  <section class="about">
+    <section class="hero">
+      <div class="container--hero">
+        <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+        <button class="btn" type="button" data-modal-open>Заказать услугу</button>
+      </div>
+    </section>
+    <!-- <section class="about">
    <div class="container container-about">
     <h2 class="about__title-invisible visually-hidden">особенности</h2>
     <ul class="about__menu">
@@ -464,61 +464,62 @@
    </div>
   </div> -->
   </footer>
-  <!-- <div class="backdrop is-hidden" data-modal>
-  <div class="modal-window">
-   <button type="button" class="modal-window__close-btn" data-modal-close>
-    <svg class="modal-window__close-btn__icon">
-     <use href="./images/sprite.svg#icon-close"></use>
-    </svg>
-   </button>
-   <form class="modal-window__form">
-    <p class="modal-window__form__suptitle">Оставьте свои данные, мы вам перезвоним</p>
-    <label class="modal-window__form-label">
-     Имя
-     <span class="modal-window__form-element">
-      <input name="user-name" class="modal-window__form__imput" type="text" minlength="2" pattern="[a-zA-Zа-яёА-ЯЁ]+"
-       title="Использовать символы латиницы или кирилицы" required>
-      <svg class="modal-window__form-icon">
-       <use href="./images/sprite.svg#icon-vector"></use>
-      </svg>
-     </span>
-    </label>
-    <label class="modal-window__form-label">
-     Телефон
-     <span class="modal-window__form-element">
-      <input name="user-tel" class="modal-window__form__imput" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-       title="096-000-00-00" required>
-      <svg class="modal-window__form-icon">
-       <use href="./images/sprite.svg#icon-vector-3"></use>
-      </svg>
-     </span>
-    </label>
-    <label class="modal-window__form-label">
-     Почта
-     <span class="modal-window__form-element">
-      <input name="user-email" class="modal-window__form__imput" type="email" required>
-      <svg class="modal-window__form-icon">
-       <use href="./images/sprite.svg#icon-vector-2"></use>
-      </svg>
-     </span>
-    </label>
-    <label class="modal-window__form-messege-label">
-     Комментарий
-     <textarea name="user-messege" class="modal-window__form-messege" placeholder="Введите текст"></textarea>
-    </label>
-    <div class="modal-window__form-checkbox">
-     <input class="modal-window__form__checkbox-input visually-hidden " type="checkbox" id="accept-policy">
-     <label class="modal-window__form-checkbox-label" for="accept-policy">
-      Соглашаюсь с рассылкой и принимаю&nbsp <a class="modal-window__form-link-accept-policy" href="">Условия
-       договора</a></label>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal-window">
+      <button type="button" class="modal-window__close-btn" data-modal-close>
+        <svg class="modal-window__close-btn__icon">
+          <use href="./images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <form class="modal-window__form">
+        <p class="modal-window__form__suptitle">Оставьте свои данные, мы вам перезвоним</p>
+        <label class="modal-window__form-label">
+          Имя
+          <span class="modal-window__form-element">
+            <input name="user-name" class="modal-window__form__imput" type="text" minlength="2"
+              pattern="[a-zA-Zа-яёА-ЯЁ]+" title="Использовать символы латиницы или кирилицы" required>
+            <svg class="modal-window__form-icon">
+              <use href="./images/sprite.svg#icon-vector"></use>
+            </svg>
+          </span>
+        </label>
+        <label class="modal-window__form-label">
+          Телефон
+          <span class="modal-window__form-element">
+            <input name="user-tel" class="modal-window__form__imput" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              title="096-000-00-00" required>
+            <svg class="modal-window__form-icon">
+              <use href="./images/sprite.svg#icon-vector-3"></use>
+            </svg>
+          </span>
+        </label>
+        <label class="modal-window__form-label">
+          Почта
+          <span class="modal-window__form-element">
+            <input name="user-email" class="modal-window__form__imput" type="email" required>
+            <svg class="modal-window__form-icon">
+              <use href="./images/sprite.svg#icon-vector-2"></use>
+            </svg>
+          </span>
+        </label>
+        <label class="modal-window__form-messege-label">
+          Комментарий
+          <textarea name="user-messege" class="modal-window__form-messege" placeholder="Введите текст"></textarea>
+        </label>
+        <div class="modal-window__form-checkbox">
+          <input class="modal-window__form__checkbox-input visually-hidden " type="checkbox" id="accept-policy">
+          <label class="modal-window__form-checkbox-label" for="accept-policy">
+            Соглашаюсь с рассылкой и принимаю&nbsp <a class="modal-window__form-link-accept-policy" href="">Условия
+              договора</a></label>
+        </div>
+        <button type="submit" class=" btn btn--modal-window ">Отправить</button>
+      </form>
     </div>
-    <button type="submit" class=" btn btn--modal-window ">Отправить</button>
-   </form>
+
+
   </div>
-
-
- </div> -->
-  <!-- <script src="./js/modal.js"></script> -->
+  <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 
 </body>
 

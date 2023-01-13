@@ -7,6 +7,7 @@
 }
 
 .container--header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +30,7 @@
     height: 16px;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (min-width:480px) {
     .container--header {
         margin: 0;
     }

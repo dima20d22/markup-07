@@ -121,7 +121,7 @@
     color: var(--darkish);
 }
 
-@each $foto in minilop,
+@each $foto in minilap,
 basket,
 fisch,
 kopfho,
@@ -129,7 +129,7 @@ box,
 bildsch,
 buch,
 tab,
-loptop {
+laptop {
     .#{$foto}-icon {
         background-image: url(../images/portfolio/#{$foto}img.jpg);
         width: 370px;
