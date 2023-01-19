@@ -186,18 +186,18 @@ section {
     margin-right: 92px;
   }
 }
+.container--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navi__menu {
   display: none;
 }
 
 .header__contacts {
   display: none;
-}
-
-.container--header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .burger-menu {
@@ -313,18 +313,18 @@ section {
     height: 16px;
   }
 }
+.container--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navi__menu {
   display: none;
 }
 
 .header__contacts {
   display: none;
-}
-
-.container--header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .burger-menu {
@@ -460,7 +460,7 @@ section {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFFFFF;
-  width: 360px;
+  max-width: 360px;
   margin: auto;
   margin-bottom: 30px;
 }
