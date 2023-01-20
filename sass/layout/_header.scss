@@ -32,9 +32,9 @@
 }
 
 @media screen and (min-width:768px) and (min-width:480px) {
-    .container--header {
-        margin: 0;
-    }
+    // .container--header {
+    //     margin: 0;
+    // }
 
     .burger-menu {
         display: none;
@@ -139,6 +139,8 @@
 }
 
 @media screen and (min-width:1200px) {
+
+
 
     .header__contacts {
         display: flex;
