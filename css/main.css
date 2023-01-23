@@ -1165,6 +1165,7 @@ section {
 
 .mobile-menu__contacts {
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .contacts__elem-tel {
