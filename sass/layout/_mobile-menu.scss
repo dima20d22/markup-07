@@ -66,6 +66,7 @@
 .mobile-menu__contacts {
   flex-wrap: wrap;
   margin-top: auto;
+  margin-bottom: 20px;
   // margin-top: 302px;
 }
 
@@ -75,9 +76,9 @@
 
 .contacts__elem-email {
 
-  min-height: 64px;
+  // min-height: 64px;
   // margin-bottom: auto;
-  // margin-bottom: 64px;
+  margin-bottom: 64px;
 
 }
 
