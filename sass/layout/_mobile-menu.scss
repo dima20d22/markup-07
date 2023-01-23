@@ -18,7 +18,7 @@
   padding: 40px;
   background-color: #ffff;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -75,8 +75,9 @@
 
 .contacts__elem-email {
 
-  margin-bottom: auto;
-  margin-bottom: 64px;
+  min-height: 64px;
+  // margin-bottom: auto;
+  // margin-bottom: 64px;
 
 }
 
