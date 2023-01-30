@@ -775,9 +775,18 @@ section {
   margin-bottom: 50px;
 }
 
+.clients__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .clients__element {
   margin-right: 0px;
   max-width: 210px;
+}
+.clients__element:nth-child(-n+4) {
+  margin-bottom: 30px;
 }
 
 .clients__link {
@@ -807,6 +816,40 @@ section {
   fill: var(--bluelish);
 }
 
+@media screen and (min-width: 768px) {
+  .clients__menu {
+    display: unset;
+    display: flex;
+  }
+  .clients__element {
+    display: unset;
+    width: 226px;
+  }
+  .clients__element:nth-child(-n+4) {
+    margin-bottom: 0px;
+  }
+  .clients__element:nth-child(-n+3) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+    line-height: 42px;
+    line-height: 100%;
+    color: var(--blacklish);
+  }
+  .clients__menu {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .clients__element:not(:last-child) {
+    margin-right: 30px;
+  }
+  .clients__element:not(:last-child):nth-child(-n+4) {
+    margin-bottom: 0px;
+  }
+}
 .footer {
   background-color: #2F303A;
   align-items: center;
@@ -814,16 +857,17 @@ section {
 }
 
 .container--footer {
-  display: flex;
+  display: block;
+  margin: 0 auto;
 }
 
 .footer__contact {
-  margin-right: 70px;
+  display: block;
+  text-align: center;
 }
 
 .contact__address {
-  font-style: normal;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .contact__element:not(:last-child) {
@@ -851,8 +895,11 @@ section {
 }
 
 .footer__social {
-  margin-right: 70px;
-  margin-top: 15px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  max-width: 206px;
 }
 
 .social__title {
@@ -869,8 +916,7 @@ section {
 
 .social__menu {
   display: flex;
-  flex-wrap: wrap;
-  width: 206px;
+  max-width: 206px;
   justify-content: space-between;
 }
 
@@ -891,10 +937,8 @@ section {
 
 .footer__subscribe-send {
   display: block;
-}
-
-.subscribe__form {
-  display: flex;
+  text-align: center;
+  margin-top: 60px;
 }
 
 .subscribe__label {
@@ -908,15 +952,14 @@ section {
 }
 
 .subscribe__email {
-  display: flex;
-  align-items: flex-end;
+  display: block;
 }
 
 .subscribe__input {
   background-color: transparent;
   border: none;
   outline: none;
-  width: 358px;
+  width: 100%;
   height: 50px;
   color: #FFFFFF;
   padding-left: 16px;
@@ -924,14 +967,33 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   margin-right: 12px;
+  margin-bottom: 20px;
 }
 
 .subscribe__form-icon {
   width: 24px;
   height: 24px;
   margin-left: 10px;
+  justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
+  .container--footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer__social {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__subscribe-send {
+    margin: 0;
+    padding: 0;
+  }
+}
 .backdrop {
   position: fixed;
   top: 0;
