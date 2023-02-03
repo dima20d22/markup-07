@@ -245,6 +245,7 @@ section {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--blacklish);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .navi__link:hover, .navi__link:focus {
     color: var(--bluelish);
@@ -261,11 +262,14 @@ section {
     padding: 0 0 25px 0;
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .navi__link:hover::after {
+  .navi__link:hover::after, .navi__link:focus::after {
     background: linear-gradient(to bottom, transparent 90%, #2196F3 10%);
   }
   .header__contacts {
     width: fit-content;
+  }
+  .contacts__elem {
+    outline: none;
   }
   .contacts__elem:hover, .contacts__elem:focus {
     Fill: var(--bluelish);
@@ -369,6 +373,7 @@ section {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--blacklish);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .navi__link:hover, .navi__link:focus {
     color: var(--bluelish);
@@ -385,11 +390,14 @@ section {
     padding: 0 0 25px 0;
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .navi__link:hover::after {
+  .navi__link:hover::after, .navi__link:focus::after {
     background: linear-gradient(to bottom, transparent 90%, #2196F3 10%);
   }
   .header__contacts {
     width: fit-content;
+  }
+  .contacts__elem {
+    outline: none;
   }
   .contacts__elem:hover, .contacts__elem:focus {
     Fill: var(--bluelish);
@@ -916,7 +924,7 @@ section {
 
 .social__menu {
   display: flex;
-  max-width: 206px;
+  width: 206px;
   justify-content: space-between;
 }
 
@@ -992,6 +1000,113 @@ section {
   .footer__subscribe-send {
     margin: 0;
     padding: 0;
+  }
+  .footer {
+    background-color: #2F303A;
+    align-items: center;
+    padding: 94px 0;
+  }
+  .container--footer {
+    display: flex;
+  }
+  .footer__contact {
+    margin-right: 70px;
+  }
+  .contact__address {
+    font-style: normal;
+    margin-top: 20px;
+  }
+  .contact__element:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .contact__link-email {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+  }
+  .contact__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contact__link:hover, .contact__link:focus {
+    color: var(--bluelish);
+  }
+  .footer__social {
+    margin-right: 70px;
+    margin-top: 15px;
+  }
+  .social__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+  .social__menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 206px;
+    justify-content: space-between;
+  }
+  .social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: #FFFFFF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .social__link:hover, .social__link:focus {
+    background-color: var(--bluelish);
+  }
+  .subscribe__form {
+    display: block;
+  }
+  .subscribe__label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 15px;
+  }
+  .subscribe__email {
+    display: flex;
+    align-items: flex-end;
+  }
+  .subscribe__input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 358px;
+    height: 50px;
+    color: #FFFFFF;
+    padding-left: 16px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-right: 12px;
+  }
+  .subscribe__form-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
   }
 }
 .backdrop {
@@ -1126,6 +1241,9 @@ section {
 }
 .modal-window__form-messege:hover, .modal-window__form-messege:focus + .modal-form-messege-label {
   outline: none;
+  border-color: var(--bluelish);
+}
+.modal-window__form-messege:checked {
   border-color: var(--bluelish);
 }
 
