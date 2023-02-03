@@ -1582,12 +1582,12 @@ section {
   .service__menu {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
   }
   .service__elem {
+    display: flex;
+    flex-direction: column;
     max-width: 354px;
-    align-items: stretch;
   }
 }
 @media screen and (min-width: 1200px) {
