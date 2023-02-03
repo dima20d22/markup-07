@@ -85,9 +85,10 @@
 }
 
 .service-info {
-    background-color: #FFFFFF;
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
+    background-color: #FFFFFF;
 }
 
 .info__name {
@@ -144,10 +145,19 @@
     .service__menu {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
         justify-content: space-between;
     }
 
     .service__elem {
         max-width: 354px;
+        align-items: stretch;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .service__elem {
+        max-width: 370px;
     }
 }
