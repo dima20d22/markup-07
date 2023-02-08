@@ -2,6 +2,7 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  overflow: auto;
 }
 
 .mobile-menu.is-open {
@@ -15,6 +16,7 @@
   z-index: 100;
   top: 0;
   left: 0;
+
   padding: 40px;
   background-color: #ffff;
   width: 100%;
